@@ -23,11 +23,12 @@ in the process, and provides additional security-related utility
 functions.
 
 %description -l pl
-libGringotts jest bibliotek± C o bezpiecznych w±tkach, która pozwala
-na zapisywanie danych w konkretnych formatach plików. Dane s±
-kompresowane i szyfrowane silnym algorytmem i zapisywane na dysku w
-bezpieczny sposób. Biblioteka ta daje kontrolê nad ka¿dym u¿ytym
-algorytmem i udostêpnia dodatkowe, bezpieczne funkcje u¿ytkowe.
+libGringotts jest bibliotek± C nadaj±c± siê do u¿ytku w programach
+wielow±tkowych, która pozwala na zapisywanie danych w konkretnych
+formatach plików. Dane s± kompresowane, szyfrowane silnym algorytmem
+i zapisywane na dysku w bezpieczny sposób. Biblioteka ta daje kontrolê
+nad ka¿dym u¿ytym algorytmem i udostêpnia dodatkowe, bezpieczne
+funkcje u¿ytkowe.
 
 %package devel
 Summary:	Headers for libgringotts
@@ -44,7 +45,7 @@ Pliki potrzebne do tworzenia aplikacji u¿ywaj±cych libGringotts.
 %package static
 Summary:	Static version of libgringotts
 Summary(pl):	Statyczna wersja libgringotts
-Group:	Development/Libraries
+Group:		Development/Libraries
 Requires:	%{name}-devel = %{version}
 
 %description static
@@ -67,13 +68,13 @@ rm -rf $RPM_BUILD_ROOT
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
 
-ln -sf %{_libdir}/libgringotts.so.2.0.6 \
+ln -sf libgringotts.so.2.0.6 \
 	$RPM_BUILD_ROOT%{_libdir}/libgringotts.so
 
 %clean
 rm -rf $RPM_BUILD_ROOT
 
-%post -p /sbin/ldconfig
+%post	-p /sbin/ldconfig
 %postun -p /sbin/ldconfig
 
 %files
