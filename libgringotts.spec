@@ -2,17 +2,17 @@ Summary:	Small library to encapsulate data in an encrypted structure
 Summary(pl):	Ma³a biblioteka do hermetyzacji danych w zaszyfrowanej strukturze
 Name:		libgringotts
 Version:	1.2.1
-Release:	2
+Release:	3
 License:	GPL
 Group:		Libraries
 Source0:	http://devel.pluto.linux.it/projects/libGringotts/current/%{name}-%{version}.tar.bz2
 # Source0-md5:	ccea1078679d79c924842fad40de4102
 URL:		http://devel.pluto.linux.it/projects/libGringotts/index.php
+BuildRequires:	automake
 BuildRequires:	bzip2-devel
 BuildRequires:	libmcrypt-devel
 BuildRequires:	mhash-devel
 BuildRequires:	zlib-devel
-Requires(post,postun):	/sbin/ldconfig
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -35,7 +35,7 @@ funkcje u¿ytkowe.
 Summary:	Headers for libgringotts
 Summary(pl):	Pliki nag³ówkowe libgringotts
 Group:		Development/Libraries
-Requires:	%{name} = %{version}
+Requires:	%{name} = %{version}-%{release}
 
 %description devel
 Files needed to develop applications with libGringotts.
@@ -47,7 +47,11 @@ Pliki potrzebne do tworzenia aplikacji u¿ywaj±cych libGringotts.
 Summary:	Static version of libgringotts
 Summary(pl):	Statyczna wersja libgringotts
 Group:		Development/Libraries
-Requires:	%{name}-devel = %{version}
+Requires:	%{name}-devel = %{version}-%{release}
+Requires:	bzip2-devel
+Requires:	libmcrypt-devel
+Requires:	mhash-devel
+Requires:	zlib-devel
 
 %description static
 Static version of libgringotts.
@@ -59,6 +63,7 @@ Statyczna wersja libgringotts.
 %setup -q
 
 %build
+cp -f /usr/share/automake/config.* .
 %configure
 
 %{__make}
@@ -86,10 +91,10 @@ rm -rf $RPM_BUILD_ROOT
 %files devel
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_libdir}/lib*.so
-%{_libdir}/*.la
+%{_libdir}/lib*.la
 %{_includedir}/*
 %{_pkgconfigdir}/*
 
 %files static
 %defattr(644,root,root,755)
-%{_libdir}/*.a
+%{_libdir}/lib*.a
