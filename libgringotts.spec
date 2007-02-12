@@ -1,5 +1,5 @@
 Summary:	Small library to encapsulate data in an encrypted structure
-Summary(pl):	Ma³a biblioteka do hermetyzacji danych w zaszyfrowanej strukturze
+Summary(pl.UTF-8):   MaÅ‚a biblioteka do hermetyzacji danych w zaszyfrowanej strukturze
 Name:		libgringotts
 Version:	1.2.1
 Release:	4
@@ -23,29 +23,29 @@ a secure way. The library gives control over every algorithm involved
 in the process, and provides additional security-related utility
 functions.
 
-%description -l pl
-libGringotts jest bibliotek± C nadaj±c± siê do u¿ytku w programach
-wielow±tkowych, która pozwala na zapisywanie danych w konkretnych
-formatach plików. Dane s± kompresowane, szyfrowane silnym algorytmem
-i zapisywane na dysku w bezpieczny sposób. Biblioteka ta daje kontrolê
-nad ka¿dym u¿ytym algorytmem i udostêpnia dodatkowe, bezpieczne
-funkcje u¿ytkowe.
+%description -l pl.UTF-8
+libGringotts jest bibliotekÄ… C nadajÄ…cÄ… siÄ™ do uÅ¼ytku w programach
+wielowÄ…tkowych, ktÃ³ra pozwala na zapisywanie danych w konkretnych
+formatach plikÃ³w. Dane sÄ… kompresowane, szyfrowane silnym algorytmem
+i zapisywane na dysku w bezpieczny sposÃ³b. Biblioteka ta daje kontrolÄ™
+nad kaÅ¼dym uÅ¼ytym algorytmem i udostÄ™pnia dodatkowe, bezpieczne
+funkcje uÅ¼ytkowe.
 
 %package devel
 Summary:	Headers for libgringotts
-Summary(pl):	Pliki nag³ówkowe libgringotts
+Summary(pl.UTF-8):   Pliki nagÅ‚Ã³wkowe libgringotts
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 
 %description devel
 Files needed to develop applications with libGringotts.
 
-%description devel -l pl
-Pliki potrzebne do tworzenia aplikacji u¿ywaj±cych libGringotts.
+%description devel -l pl.UTF-8
+Pliki potrzebne do tworzenia aplikacji uÅ¼ywajÄ…cych libGringotts.
 
 %package static
 Summary:	Static version of libgringotts
-Summary(pl):	Statyczna wersja libgringotts
+Summary(pl.UTF-8):   Statyczna wersja libgringotts
 Group:		Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
 Requires:	bzip2-devel
@@ -56,7 +56,7 @@ Requires:	zlib-devel
 %description static
 Static version of libgringotts.
 
-%description static -l pl
+%description static -l pl.UTF-8
 Statyczna wersja libgringotts.
 
 %prep
