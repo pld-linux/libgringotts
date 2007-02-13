@@ -1,5 +1,5 @@
 Summary:	Small library to encapsulate data in an encrypted structure
-Summary(pl.UTF-8):   Mała biblioteka do hermetyzacji danych w zaszyfrowanej strukturze
+Summary(pl.UTF-8):	Mała biblioteka do hermetyzacji danych w zaszyfrowanej strukturze
 Name:		libgringotts
 Version:	1.2.1
 Release:	4
@@ -33,7 +33,7 @@ funkcje użytkowe.
 
 %package devel
 Summary:	Headers for libgringotts
-Summary(pl.UTF-8):   Pliki nagłówkowe libgringotts
+Summary(pl.UTF-8):	Pliki nagłówkowe libgringotts
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 
@@ -45,7 +45,7 @@ Pliki potrzebne do tworzenia aplikacji używających libGringotts.
 
 %package static
 Summary:	Static version of libgringotts
-Summary(pl.UTF-8):   Statyczna wersja libgringotts
+Summary(pl.UTF-8):	Statyczna wersja libgringotts
 Group:		Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
 Requires:	bzip2-devel
