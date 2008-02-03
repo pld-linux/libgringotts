@@ -5,9 +5,9 @@ Version:	1.2.1
 Release:	4
 License:	GPL
 Group:		Libraries
-Source0:	http://devel.pluto.linux.it/projects/libGringotts/current/%{name}-%{version}.tar.bz2
+Source0:	http://prdownload.berlios.de/gringotts/%{name}-%{version}.tar.bz2
 # Source0-md5:	ccea1078679d79c924842fad40de4102
-URL:		http://devel.pluto.linux.it/projects/libGringotts/index.php
+URL:		http://gringotts.berlios.de/
 BuildRequires:	automake
 BuildRequires:	bzip2-devel
 BuildRequires:	libmcrypt-devel
