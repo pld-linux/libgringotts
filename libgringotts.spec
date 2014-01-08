@@ -2,7 +2,7 @@ Summary:	Small library to encapsulate data in an encrypted structure
 Summary(pl.UTF-8):	Mała biblioteka do hermetyzacji danych w zaszyfrowanej strukturze
 Name:		libgringotts
 Version:	1.2.1
-Release:	4
+Release:	5
 License:	GPL
 Group:		Libraries
 Source0:	http://prdownload.berlios.de/gringotts/%{name}-%{version}.tar.bz2
@@ -77,6 +77,9 @@ rm -rf $RPM_BUILD_ROOT
 ln -sf libgringotts.so.2.0.7 \
 	$RPM_BUILD_ROOT%{_libdir}/libgringotts.so
 
+# docdir was not empty
+rm -rf $RPM_BUILD_ROOT%{_docdir}
+
 %clean
 rm -rf $RPM_BUILD_ROOT
 
@@ -85,8 +88,9 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc AUTHORS README TODO
+%doc AUTHORS README TODO docs/manual.htm
 %attr(755,root,root) %{_libdir}/libgringotts.so.*.*.*
+%attr(755,root,root) %ghost %{_libdir}/libgringotts.so.2
 
 %files devel
 %defattr(644,root,root,755)
