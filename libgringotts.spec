@@ -2,7 +2,7 @@ Summary:	Small library to encapsulate data in an encrypted structure
 Summary(pl.UTF-8):	Mała biblioteka do hermetyzacji danych w zaszyfrowanej strukturze
 Name:		libgringotts
 Version:	1.2.1
-Release:	5
+Release:	6
 License:	GPL
 Group:		Libraries
 Source0:	http://prdownload.berlios.de/gringotts/%{name}-%{version}.tar.bz2
